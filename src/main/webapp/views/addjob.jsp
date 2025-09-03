@@ -64,15 +64,15 @@
 
 
 						<div class="mb-1">
-							<label for="postDesc" class="form-label">Post Description</label>
-							<textarea class="form-control" id="postDesc" name="postDesc" rows="2" required></textarea>
+							<label for="postDescription" class="form-label">Post Description</label>
+							<textarea class="form-control" id="postDescription" name="postDescription" rows="2" required></textarea>
 						</div>
 
 
 						<div class="mb-1">
-							<label for="reqExperience" class="form-label">Required
+							<label for="reqExp" class="form-label">Required
 								Experience</label>
-							<input type="number" class="form-control" id="reqExperience" name="reqExperience" required>
+							<input type="number" class="form-control" id="reqExperience" name="reqExp" required>
 						</div>
 
 

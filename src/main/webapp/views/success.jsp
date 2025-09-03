@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
-<%@ page import="com.telusko.JobApp.model.JobPost" %>
+<%@ page import="com.maaz.JobApp_Java.model.JobPost" %>
 <%@page isELIgnored="false" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,11 +69,11 @@
                     <h5 class="card-title"><%= myJobPost.getPostProfile() %></h5>
                     <p class="card-text">
                         <strong>Description:</strong>
-                        <%= myJobPost.getPostDesc() %>
+                        <%= myJobPost.getPostDescription() %>
                     </p>
                     <p class="card-text">
                         <strong>Experience Required:</strong>
-                        <%= myJobPost.getReqExperience() %> years
+                        <%= myJobPost.getReqExp() %> years
                     </p>
                     <p class="card-text">
                         <strong>Tech Stack:</strong>
