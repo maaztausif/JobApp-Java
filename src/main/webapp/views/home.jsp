@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Telusko Job Portal</title>
+	<title>Maaz Job Portal</title>
 
 
 	<link
@@ -38,7 +38,7 @@
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link" href="https://telusko.com/">Contact</a>
+					<a class="nav-link" href="https://google.com/">Contact</a>
 				</li>
 			</ul>
 		</div>
