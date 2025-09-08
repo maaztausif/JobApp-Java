@@ -1,5 +1,6 @@
 package com.maaz.JobApp_Java.model;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
@@ -23,5 +24,6 @@ public class JobPost {
     private String postProfile;
     private String postDescription;
     private Integer reqExp;
+//    @ElementCollection
     private List<String> postTechStack;
 }

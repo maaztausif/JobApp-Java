@@ -36,14 +36,52 @@ public class JobController {
         }
 
 
-        @PostMapping("handleForm")
-        @ResponseBody
-        public String jobPost(JobPost jobPost){
-            System.out.println("Job post in JobController where handleform");
+        // Adding data in the DB
+    @PostMapping("jobPost")
+    @ResponseBody
+    public JobPost jobPost(@RequestBody JobPost jobPost){
+        return  service.addJob(jobPost);
+    }
 
-            service.addJob(jobPost);
-            return "success";
-        }
+    // Getting all the JobsList
+    @GetMapping("jobPosts")
+    @ResponseBody
+    public List<JobPost>  jobPost(){
+            return service.getAllJobPost();
+    }
+
+    //Update Job List
+    @PutMapping("jobPost")
+    @ResponseBody
+    public JobPost  updateJobPost(@RequestBody JobPost jobPost){
+        return service.addJob(jobPost);
+    }
+
+    // Delete Job List
+    @DeleteMapping("jobPost/{postId}")
+    @ResponseBody
+    public String deleteJobList(@PathVariable Integer postId ){
+        System.out.println("chal gya bhai == = = == = = = = = = =");
+        return service.deleteJobList(postId);
+    }
+
+    // FInd By post profile or description
+    @GetMapping("jobPost/keyword/{keyword}")
+    @ResponseBody
+    public List<JobPost> deleteJobList(@PathVariable String keyword ){
+        return service.searchByKeyword(keyword);
+    }
+
+//        @PostMapping("handleForm")
+//        @ResponseBody
+//        public String jobPost(JobPost jobPost){
+//            System.out.println("Job post in JobController where handleform");
+//
+//            service.addJob(jobPost);
+//            return "success";
+//        }
+
+
 
         @GetMapping("handleForm")
         @ResponseBody

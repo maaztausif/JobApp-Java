@@ -17,9 +17,10 @@ public class JobService {
 
 
 
-    public void addJob(JobPost jobPost){
-
-        repo.save(jobPost);
+    public JobPost addJob(JobPost jobPost){
+        System.out.println(jobPost);
+        System.out.println("=======++++++");
+        return repo.save(jobPost);
 //        repo.findAll();
 
 //        System.out.println("Add Job in Service");
@@ -27,6 +28,11 @@ public class JobService {
 //        repo.addJobs(jobPost);
 //        System.out.println(jobPost);
 
+    }
+
+    public String deleteJobList(Integer postId){
+         repo.deleteById(postId);
+        return "deleted";
     }
 
     public List<JobPost> getAllJobPost(){
@@ -70,4 +76,10 @@ public class JobService {
         repo.saveAll(jobs);
         return "saved";
     }
+
+    public List<JobPost> searchByKeyword(String keyword) {
+        return repo.findByPostProfileContainingOrPostDescriptionContainingIgnoreCase(keyword,keyword);
+    }
+
+
 }
