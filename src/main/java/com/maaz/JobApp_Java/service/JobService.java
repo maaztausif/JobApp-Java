@@ -17,6 +17,9 @@ public class JobService {
 
 
 
+
+    // Add A job
+
     public JobPost addJob(JobPost jobPost){
         System.out.println(jobPost);
         System.out.println("=======++++++");
@@ -30,17 +33,20 @@ public class JobService {
 
     }
 
+    //Delete A Job
     public String deleteJobList(Integer postId){
          repo.deleteById(postId);
         return "deleted";
     }
 
+    //Get All Job
     public List<JobPost> getAllJobPost(){
 //        System.out.println("Get all Job in Service");
 //
         return repo.findAll();
     }
 
+    //Get Job By Id
     public JobPost getJob(Integer postId){
         return repo.findById(postId).orElse(new JobPost());
     }
@@ -54,6 +60,8 @@ public class JobService {
          return true;
     }
 
+
+    //Load Data in a DB
     public String loadData(){
         List<JobPost> jobs = new ArrayList<>(Arrays.asList(
 
@@ -77,6 +85,7 @@ public class JobService {
         return "saved";
     }
 
+    //Searching By Keyword
     public List<JobPost> searchByKeyword(String keyword) {
         return repo.findByPostProfileContainingOrPostDescriptionContainingIgnoreCase(keyword,keyword);
     }
