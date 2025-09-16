@@ -54,7 +54,7 @@ public class JobController {
     @PutMapping("jobPost")
     @ResponseBody
     public JobPost  updateJobPost(@RequestBody JobPost jobPost){
-        return service.addJob(jobPost);
+            return service.addJob(jobPost);
     }
 
     // Delete Job List
@@ -63,6 +63,14 @@ public class JobController {
     public String deleteJobList(@PathVariable Integer postId ){
         System.out.println("chal gya bhai == = = == = = = = = = =");
         return service.deleteJobList(postId);
+    }
+
+    // Get By postID Job List
+    @GetMapping("jobPost/{postId}")
+    @ResponseBody
+    public JobPost getPostById(@PathVariable Integer postId ){
+        System.out.println("chal gya bhai == = = == = = = = = = =");
+        return service.getJob(postId);
     }
 
     // FInd By post profile or description

@@ -51,6 +51,7 @@ public class JobService {
         return repo.findById(postId).orElse(new JobPost());
     }
 
+    //Update Job
     public JobPost updateJob(JobPost updateJobPost){
         return repo.save(updateJobPost);
     }
